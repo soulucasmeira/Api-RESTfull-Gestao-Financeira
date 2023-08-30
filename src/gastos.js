@@ -1,4 +1,5 @@
 const { bancoDeDados } = require("../bancoDeDados");
+const { encontrarUsuarioPeloId, encontrarGastosPeloId } = require("./banco/usuario");
 
 const listarGastos = (idPessoa) => {
     if (!idPessoa) {
@@ -10,17 +11,14 @@ const listarGastos = (idPessoa) => {
     };
 
 
-    const pessoaEncontrada = bancoDeDados.usuarios.find((usuario) => {
-        return usuario.id === Number(idPessoa)
-    });
+    const pessoaEncontrada = encontrarUsuarioPeloId(idPessoa);
 
     if (!pessoaEncontrada) {
-        return { mensagem: "Usuario não enontrado." }
+        return { mensagem: "Usuario não encontrado." };
     };
 
-    const gastosEncontrados = bancoDeDados.gastos.filter((gasto) => {
-        return gasto.id_usuario === Number(idPessoa);
-    });
+    const gastosEncontrados = encontrarGastosPeloId(idPessoa);
+
     if (gastosEncontrados.length === 0) {
         return { mensagem: "Esse usuario não teve gastos." }
     }
