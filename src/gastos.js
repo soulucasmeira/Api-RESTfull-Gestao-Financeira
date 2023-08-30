@@ -1,5 +1,6 @@
 const { bancoDeDados } = require("../bancoDeDados");
-const { encontrarUsuarioPeloId, encontrarGastosPeloId } = require("./banco/usuario");
+const { encontrarGastosPeloId } = require("./banco/encontrarGastos");
+const { encontrarUsuarioPeloId } = require("./banco/encontrarUsuario");
 
 const listarGastos = (idPessoa) => {
     if (!idPessoa) {
@@ -28,7 +29,7 @@ const listarGastos = (idPessoa) => {
 
 };
 
-console.log(listarGastos('4'))
+console.log(listarGastos('1'))
 
 
 module.exports = {
