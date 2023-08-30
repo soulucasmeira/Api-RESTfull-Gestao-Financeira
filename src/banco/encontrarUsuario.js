@@ -1,8 +1,8 @@
 const { bancoDeDados } = require("../../bancoDeDados");
 
-const encontrarUsuarioPeloId = (idPessoa) => {
+const encontrarUsuarioPeloId = (id) => {
     return bancoDeDados.usuarios.find((usuario) => {
-        return usuario.id === Number(idPessoa)
+        return usuario.id === Number(id)
     });
 };
 

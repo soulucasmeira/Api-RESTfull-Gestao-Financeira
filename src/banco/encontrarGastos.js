@@ -1,8 +1,8 @@
 const { bancoDeDados } = require("../../bancoDeDados");
 
-const encontrarGastosPeloId = (idPessoa) => {
+const encontrarGastosPeloId = (id) => {
     return bancoDeDados.gastos.filter((gasto) => {
-        return gasto.id_usuario === Number(idPessoa);
+        return gasto.id_usuario === Number(id);
     });
 }
 
