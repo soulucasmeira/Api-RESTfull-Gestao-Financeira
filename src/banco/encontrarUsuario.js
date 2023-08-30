@@ -6,7 +6,9 @@ const encontrarUsuarioPeloId = (id) => {
     });
 };
 
+const encontrarUsuarioPeloEmail = (email) => {
 
+};
 
 module.exports = {
     encontrarUsuarioPeloId

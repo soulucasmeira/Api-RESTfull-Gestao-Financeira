@@ -8,9 +8,9 @@ const listarGastos = (req, res) => {
         return res.status(400).json({ mensagem: "O id deve ser numérico." });
     };
 
-    const pessoaEncontrada = encontrarUsuarioPeloId(id);
+    const usuarioEncontrado = encontrarUsuarioPeloId(id);
 
-    if (!pessoaEncontrada) {
+    if (!usuarioEncontrado) {
         return res.status(404).json({ mensagem: "Usuario não encontrado." });
     };
 
@@ -29,8 +29,8 @@ const listarGasto = (req, res) => {
         return res.status(400).json({ mensagem: "O id deve ser numérico." });
     };
 
-    const pessoaEncontrada = encontrarUsuarioPeloId(idPessoa);
-    if (!pessoaEncontrada) {
+    const usuarioEncontrado = encontrarUsuarioPeloId(idPessoa);
+    if (!usuarioEncontrado) {
         return res.status(404).json({ mensagem: "Usuario não encontrado." });
     };
 
